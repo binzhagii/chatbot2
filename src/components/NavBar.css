@@ -1,0 +1,97 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent unwanted scrolling */
+}
+
+.navbar {
+  background: #999;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow navbar to wrap for smaller screens */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: red;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease; /* Add smooth hover effect */
+}
+
+nav a:hover {
+  color: #ccc; /* Lighten color on hover */
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 10px;
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  nav {
+    flex-direction: column; /* Stack links vertically on small screens */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space out links vertically */
+    text-align: center;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.hero {
+  height: 100vh; /* Use 100% of the viewport height */
+  background: url('/campus.jpg') no-repeat center center/cover;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}

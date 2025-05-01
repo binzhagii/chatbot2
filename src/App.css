@@ -1,0 +1,14 @@
+/* App Wrapper to take full height */
+.app {
+  min-height: 100vh; /* Ensure the app takes at least full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Makes sure navbar and content align properly */
+}
+
+/* Apply flex layout to body */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
